@@ -34,14 +34,14 @@ export class AppService {
         return {
           code: 400,
           status: 'error',
-          message: 'Invalid username or password',
+          message: 'Tài khoản hoặc mật khẩu sai',
         };
       }
     } catch (error) {
       return {
         code: 400,
         status: 'error',
-        message: 'Invalid username or password',
+        message: 'Tài khoản hoặc mật khẩu sai',
       };
     }
   }
@@ -55,20 +55,22 @@ export class AppService {
         return {
           code: 200,
           status: 'success',
-          message: 'Access granted',
+          message:
+            'Vui lòng đăng kí tài khoản hoặc liên hệ admin để giải quyết',
         };
       } else {
         return {
           code: 403,
           status: 'error',
-          message: 'Access denied',
+          message:
+            'Vui lòng đăng kí tài khoản hoặc liên hệ admin để giải quyết',
         };
       }
     } catch (error) {
       return {
         code: 400,
         status: 'error',
-        message: 'Access denied',
+        message: 'Vui lòng đăng kí tài khoản hoặc liên hệ admin để giải quyết',
       };
     }
   }
